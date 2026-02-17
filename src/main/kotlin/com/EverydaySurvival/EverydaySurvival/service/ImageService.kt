@@ -2,6 +2,7 @@ package com.EverydaySurvival.EverydaySurvival.service
 
 
 import com.EverydaySurvival.EverydaySurvival.model.ImageResponse
+import com.EverydaySurvival.EverydaySurvival.model.ResBody
 import com.google.firebase.cloud.FirestoreClient
 import org.springframework.stereotype.Service
 
@@ -9,7 +10,6 @@ import org.springframework.stereotype.Service
 class ImageService {
 
     fun getAllImages(): List<ImageResponse> {
-
         val db = FirestoreClient.getFirestore()
         val images = mutableListOf<ImageResponse>()
 
@@ -25,5 +25,7 @@ class ImageService {
             )
         }
         return images
+    }
+    fun addImagesToFirebase() : ResBody<String>{
     }
 }

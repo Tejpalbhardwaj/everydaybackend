@@ -31,6 +31,8 @@ dependencies {
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 
+	implementation("com.cloudinary:kotlin-url-gen:1.7.0")
+
 }
 
 kotlin {

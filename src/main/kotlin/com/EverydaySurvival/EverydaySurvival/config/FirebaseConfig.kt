@@ -9,22 +9,17 @@ import org.springframework.core.io.ClassPathResource
 
 @Configuration
 class FirebaseConfig {
-
     @PostConstruct
     fun initFirebase() {
         if (FirebaseApp.getApps().isNotEmpty()) {
             return
         }
-
         val resource = ClassPathResource("firebase/serviceAccountKey.json")
         val credentials = GoogleCredentials.fromStream(resource.inputStream)
-
         val options = FirebaseOptions.builder()
             .setCredentials(credentials)
             .build()
-
         FirebaseApp.initializeApp(options)
-
         println("🔥 Firebase INITIALIZED SUCCESSFULLY")
     }
 }
