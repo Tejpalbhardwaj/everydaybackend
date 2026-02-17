@@ -40,3 +40,4 @@ out/
 .kotlin
 
 src/main/resources/firebase/serviceAccountKey.json
+src/main/config/API.*
